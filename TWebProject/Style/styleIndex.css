@@ -4,7 +4,7 @@
   margin-right: auto;
   margin-top: 10px;
   width: 390px; /* Specifică lățimea fixă */
-  height: 120px; /* Specifică înălțimea fixă */
+  height: 130px; /* Specifică înălțimea fixă */
 }
 
 .custom-hr {
@@ -27,7 +27,7 @@ ul li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 20px 30px;
+  padding: 30px 30px;
   text-decoration: none;
 }
 ul li a:hover {
@@ -108,26 +108,3 @@ ul li a {
   margin-top: 10px; /* spațiu deasupra rating-ului */
 }
 
-.adsContainer {
-  width: 230px;
-  height: 600px;
-  border: 2px solid;
-  float:left;
-  margin-left: 30px;
-  margin-top: 200px;
-  display:block;
-  overflow: hidden;
-  /*background-color: gray;*/
-}
-.adsContainer p {
-  width: 230px;
-  overflow: hidden;
-  height: 600px;
-  margin:0 auto;
-}
-.adsContainer img {
-  width: 230px;
-  overflow: hidden;
-  height: 600px;
-  margin:0 auto;
-}
