@@ -122,10 +122,8 @@
     <Content Include="img\.gitkeep" />
     <None Include="packages.config" />
     <None Include="Views\Home\index.cshtml" />
-    <Content Include="Views\Shared\_Adscontainer1.cshtml" />
     <Content Include="Views\Shared\_Grid.cshtml" />
     <Content Include="Views\Shared\header.cshtml" />
-    <Content Include="Views\Shared\_Adscontainer2.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
