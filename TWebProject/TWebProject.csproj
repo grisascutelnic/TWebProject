@@ -89,6 +89,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="img\ad1.png" />
+    <Content Include="img\ad2.png" />
+    <Content Include="img\ads1.png" />
+    <Content Include="img\bg.png" />
+    <Content Include="img\bk.png" />
+    <Content Include="img\dominoCaine.png" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\grayStar.png" />
+    <Content Include="img\griCat.png" />
+    <Content Include="img\icon.png" />
+    <Content Include="img\icon.svg" />
+    <Content Include="img\oreoCat.png" />
+    <Content Include="img\pisi1.png" />
+    <Content Include="img\pisi2.png" />
+    <Content Include="img\retvierCaine.png" />
+    <Content Include="img\upImg.png" />
+    <Content Include="img\yellowStar.png" />
+    <Content Include="Style\styleIndex.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -101,9 +119,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="img\.gitkeep" />
     <None Include="packages.config" />
-    <Content Include="Views\Shared\_Navbar.cshtml" />
-    <Content Include="Views\Home\index.cshtml" />
+    <None Include="Views\Home\index.cshtml" />
+    <Content Include="Views\Shared\_Adscontainer1.cshtml" />
+    <Content Include="Views\Shared\_Grid.cshtml" />
+    <Content Include="Views\Shared\header.cshtml" />
+    <Content Include="Views\Shared\_Adscontainer2.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">

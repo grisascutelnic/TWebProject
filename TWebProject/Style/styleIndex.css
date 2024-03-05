@@ -1,0 +1,133 @@
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 390px; /* Specifică lățimea fixă */
+  height: 120px; /* Specifică înălțimea fixă */
+}
+
+.custom-hr {
+  width: 20%;
+  text-align: left;
+  margin-left: 40%;
+}
+
+ul {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 30px;
+  text-decoration: none;
+}
+ul li a:hover {
+  background-color: #111;
+}
+ul li a.active {
+  background-color: #4CAF50;
+}
+
+/* Ajustarea pentru elementele 'li' să fie orizontale, nu verticale */
+ul li {
+  float: left;
+}
+
+/* Asigură că elementele 'li' nu se suprapun pe conținutul de sub navigație */
+ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Tranziții netede pentru link-uri */
+ul li a {
+  transition: background-color 0.3s; /* Adaugă o tranziție pentru schimbarea culorii de fundal */
+}
+
+
+/* Stiluri pentru grid și imagini */
+.grid-container {
+  display: grid;
+  float: left;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: auto;
+  max-width: 1200px;
+  width: 80%;
+  margin-left: 2%;
+  padding: 20px;
+}
+
+.grid-item img {
+  width: 90%;
+  height: auto;
+  max-width: 400px;
+}
+
+.grid-item {
+  border: 1px solid #cccccc;
+  padding: 20px;
+  margin-bottom: 20px; /* spațiu între containere */
+  border-radius: 10px;
+  background-color: #dfefde;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* umbra ușoară pentru efect de elevație */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.grid-item:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* umbra mai pronunțată pentru când se trece cu mouse-ul peste */
+}
+
+
+/* Stilurile pentru imaginea animalului */
+.grid-item img {
+  width: 100%; /* face ca imaginea să se potrivească cu lățimea containerului */
+  height: auto; /* menține proporțiile imaginii */
+  border-radius: 10px; /* colțuri rotunjite pentru imagine */
+}
+
+/* Stilurile pentru textul din containerul animalului */
+.grid-item .description {
+  text-align: center; /* centrat textul */
+  margin-top: 15px; /* spațiu deasupra descrierii */
+  font-size: 0.9em; /* mărimea fontului mai mică */
+}
+
+.grid-item .star-rating {
+  text-align: center; /* centrat stelele de rating */
+  margin-top: 10px; /* spațiu deasupra rating-ului */
+}
+
+.adsContainer {
+  width: 230px;
+  height: 600px;
+  border: 2px solid;
+  float:left;
+  margin-left: 30px;
+  margin-top: 200px;
+  display:block;
+  overflow: hidden;
+  /*background-color: gray;*/
+}
+.adsContainer p {
+  width: 230px;
+  overflow: hidden;
+  height: 600px;
+  margin:0 auto;
+}
+.adsContainer img {
+  width: 230px;
+  overflow: hidden;
+  height: 600px;
+  margin:0 auto;
+}
