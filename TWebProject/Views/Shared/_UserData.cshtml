@@ -3,4 +3,29 @@
     ViewBag.Title = "Home";
 }
 
+<<<<<<< HEAD
 @model TWebProject.Models.UserData
+=======
+@model TWebProject.Models.UserData
+ 
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="table">
+            <table class="table table-bordered">
+                <thead>
+                <tr><th>PRODUCT</th></tr>
+                </thead>
+                <tbody>
+                @foreach (var prod in Model.Products)
+                {
+                    <tr>
+                        <td>@prod</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+>>>>>>> 2ef4e29a52c56b31e19a4f22e256e6e0fa2c8029
