@@ -125,6 +125,7 @@
     <None Include="Views\Home\index.cshtml" />
     <Content Include="Views\Shared\_Grid.cshtml" />
     <Content Include="Views\Shared\header.cshtml" />
+    <Content Include="Views\Shared\_UserData.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
