@@ -126,6 +126,9 @@
     <Content Include="Views\Shared\_Grid.cshtml" />
     <Content Include="Views\Shared\header.cshtml" />
     <Content Include="Views\Shared\_UserData.cshtml" />
+    <Content Include="Views\Product\index.cshtml" />
+    <Content Include="Views\Login\index.cshtml" />
+    <Content Include="Views\Login\Register.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
@@ -137,6 +140,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TWebProject.BusinessLogic\TWebProject.BusinessLogic.csproj">
+      <Project>{30ab823c-fbbf-44f0-83d9-3ee14ce43a8f}</Project>
+      <Name>TWebProject.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TWebProject.Domain\TWebProject.Domain.csproj">
+      <Project>{867a1f95-3954-4b04-9fc4-2f135b5f9a41}</Project>
+      <Name>TWebProject.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
