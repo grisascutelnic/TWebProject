@@ -4,3 +4,24 @@
 }
 
 @model TWebProject.Models.UserData
+ 
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="table">
+            <table class="table table-bordered">
+                <thead>
+                <tr><th>PRODUCT</th></tr>
+                </thead>
+                <tbody>
+                @foreach (var prod in Model.Products)
+                {
+                    <tr>
+                        <td>@prod</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
