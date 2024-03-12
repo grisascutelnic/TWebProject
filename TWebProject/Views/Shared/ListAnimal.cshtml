@@ -1,17 +1,16 @@
-﻿﻿@model eUseControl.Web.Models.UserData
-
+﻿﻿@model TWebProject.Web.Models.UserData
 
 <table class="column" style="width: 100%;">
 
 
 
-    @foreach (var prod in Model.Animal)
+    @foreach (var prod in Model.Animals)
     {
 
         <td class="column">
-           
-            <img class="img-list" src="@prod.ImageUrl"/>
-           
+
+            <img class="img-list" src="@prod.ImageUrl" />
+
 
         </td>
 
@@ -19,22 +18,19 @@
     }
     <tr>
 
-        @using (Ajax.BeginForm("Animal", "Home", new AjaxOptions { HttpMethod = "POST", 
-            OnSuccess = "succes", OnFailure = "fail", UpdateTargetId = "resultTarget"}))
-
-    
+        @using (Html.BeginForm("Animal", "Home", FormMethod.Post, new { autocomplete = "off" }))
         {
 
-            foreach (var prod in Model.Animal)
+            foreach (var prod in Model.Animals)
             {
-            
+
                 <td class="column">
-                    @Html.Hidden("btn", prod)
-                    <button class="button" name="btn">BUY</button>
+                    
+                    <button class="button" name="btn" type ="submit" value="@prod">BUY</button>
                 </td>
-          
+
             }
 
-        } 
+        }
     </tr>
 </table>

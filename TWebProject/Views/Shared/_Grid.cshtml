@@ -3,16 +3,21 @@
     ViewBag.Title = "_Grid";
 }
 
-<div class="grid-item">
-    <img src="~/img/pisi2.png" alt="Animal">
-    <div class="description">
-        <p>
-            Salut! Mă numesc Mistyy și sunt o mică exploratoare în căutare de aventuri în noua mea casă.
-            Sunt plină de energie și curiozitate, și mi-ar plăcea să am un prieten ca tine
-            cu care să mă joc și să împart momente speciale.
-        </p>
+<div onclick="window.location='@Url.Action("Animal", "Home")';" style="cursor:pointer;">
+    <!-- Conținutul containerului tău aici -->
+
+
+    <div class="grid-item">
+        <img src="~/img/pisi2.png" alt="Animal">
+        <div class="description">
+            <p>
+                Salut! Mă numesc Mistyy și sunt o mică exploratoare în căutare de aventuri în noua mea casă.
+                Sunt plină de energie și curiozitate, și mi-ar plăcea să am un prieten ca tine
+                cu care să mă joc și să împart momente speciale.
+            </p>
+        </div>
+        <img src="~/img/yellowStar.png" alt="yellow Star" style="height: 35px; width: 35px; margin-top:30px;">
     </div>
-    <img src="~/img/yellowStar.png" alt="yellow Star" style="height: 35px; width: 35px; margin-top:30px;">
 </div>
 
 <div class="grid-item">
