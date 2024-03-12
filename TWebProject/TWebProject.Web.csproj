@@ -124,13 +124,12 @@
     <Content Include="Views\web.config" />
     <Content Include="img\.gitkeep" />
     <None Include="packages.config" />
+    <Content Include="Views\Home\Animal.cshtml" />
     <None Include="Views\Home\index.cshtml" />
     <Content Include="Views\Shared\_Grid.cshtml" />
     <Content Include="Views\Shared\header.cshtml" />
     <Content Include="Views\Shared\_UserData.cshtml" />
-    <Content Include="Views\Product\index.cshtml" />
-    <Content Include="Views\Login\index.cshtml" />
-    <Content Include="Views\Login\Register.cshtml" />
+    <Content Include="Views\Shared\ListAnimal.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
