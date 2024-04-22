@@ -4,10 +4,9 @@
 }
 
 <div onclick="window.location='@Url.Action("Animal", "Home")';" style="cursor:pointer;">
-    <!-- Conținutul containerului tău aici -->
 
 
-    <div class="grid-item">
+    <div class="grid-item" data-animal-name="Mistyy" onclick="navigateToAnimal(this.getAttribute('data-animal-name'));">
         <img src="~/img/pisi2.png" alt="Animal">
         <div class="description">
             <p>
@@ -20,19 +19,20 @@
     </div>
 </div>
 
-<div class="grid-item">
+<div class="grid-item" data-animal-name="Mistyy" onclick="navigateToAnimal(this.getAttribute('data-animal-name'));">
     <img src="~/img/pisi1.png" alt="Animal">
     <div class="description">
         <p>
-            Bună! Sunt Patches și caut o nouă familie care să mă iubească și să mă răsfețe.
-            Am o personalitate dulce și ador să fiu alintată.
-            Dacă îți dorești un companion tandru, sunt aici să-ți umplu zilele cu purring și dragoste.
+            Salut! Mă numesc Mistyy și sunt o mică exploratoare în căutare de aventuri în noua mea casă.
+            Sunt plină de energie și curiozitate, și mi-ar plăcea să am un prieten ca tine
+            cu care să mă joc și să împart momente speciale.
         </p>
     </div>
-    <img src="~/img/grayStar.png" alt="gray Star" style="height: 35px; width: 35px; margin-top:30px;">
+    <img src="~/img/yellowStar.png" alt="yellow Star" style="height: 35px; width: 35px; margin-top:30px;">
 </div>
 
-<div class="grid-item">
+
+<div class="grid-item" data-animal-name="Mistyy" onclick="navigateToAnimal(this.getAttribute('data-animal-name'));">
     <img src="~/img/dominoCaine.png" alt="Animal">
     <div class="description">
         <p>
@@ -44,7 +44,7 @@
     <img src="~/img/yellowStar.png" alt="yellow Star" style="height: 35px; width: 35px; margin-top:30px;">
 </div>
 
-<div class="grid-item">
+<div class="grid-item" data-animal-name="Mistyy" onclick="navigateToAnimal(this.getAttribute('data-animal-name'));">
     <img src="~/img/retvierCaine.png" alt="Animal">    <div class="description">
         <p>
             Salut, mă numesc Whiskers și sunt un explorator născut, curios să descopăr fiecare colț al noii mele case.
@@ -53,7 +53,8 @@
     </div>
     <img src="~/img/grayStar.png" alt="gray Star" style="height: 35px; width: 35px; margin-top:30px;">
 </div>
-<div class="grid-item">
+
+<div class="grid-item" data-animal-name="Mistyy" onclick="navigateToAnimal(this.getAttribute('data-animal-name'));">
     <img src="~/img/oreoCat.png" alt="Animal">
     <div class="description">
         <p>
@@ -64,8 +65,7 @@
     <img src="~/img/grayStar.png" alt="gray Star" style="height: 35px; width: 35px; margin-top:30px;">
 </div>
 
-
-<div class="grid-item">
+<div class="grid-item" data-animal-name="Mistyy" onclick="navigateToAnimal(this.getAttribute('data-animal-name'));">
     <img src="~/img/griCat.png" alt="Animal">
     <div class="description">
         <p>
@@ -75,4 +75,10 @@
     </div>
     <img src="~/img/yellowStar.png" alt="yellow Star" style="height: 35px; width: 35px; margin-top:30px;">
 </div>
+
+<script>
+    function navigateToAnimal(animalName) {
+        window.location.href = '@Url.Action("Animal", "Home")?a=' + encodeURIComponent(animalName);
+    }
+</script>
 

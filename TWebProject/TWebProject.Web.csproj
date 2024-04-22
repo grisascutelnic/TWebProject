@@ -125,11 +125,11 @@
     <Content Include="img\.gitkeep" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Animal.cshtml" />
-    <None Include="Views\Home\index.cshtml" />
     <Content Include="Views\Shared\_Grid.cshtml" />
     <Content Include="Views\Shared\header.cshtml" />
     <Content Include="Views\Shared\ListAnimal.cshtml" />
     <Content Include="Views\Shared\_LayoutAnimal.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">

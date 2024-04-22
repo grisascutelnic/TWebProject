@@ -13,8 +13,6 @@ namespace TWebProject.Web.Models
 
         public string SingleAnimal { get; internal set; }
 
-
-
     }
 
     
