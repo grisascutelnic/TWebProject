@@ -18,10 +18,10 @@ namespace TWebProject.Web.Controllers
             u.Username = "UserName";
             u.Animals = new List<Animal>
             {
-                new Animal { Name = "Animal #1", ImageUrl = "/img/pisi1.png" },
-                new Animal { Name = "Animal #2", ImageUrl = "/img/pisi2.png" },
-                new Animal { Name = "Animal #3", ImageUrl = "/img/griCat.png" },
-                new Animal { Name = "Animal #4", ImageUrl = "/img/retvierCaine.png" }
+                new Animal { Name = "Animall #1", ImageUrl = "/img/pisi1.png" },
+                new Animal { Name = "Animall #2", ImageUrl = "/img/pisi2.png" },
+                new Animal { Name = "Animall #3", ImageUrl = "/img/griCat.png" },
+                new Animal { Name = "Animall #4", ImageUrl = "/img/retvierCaine.png" }
             };
 
             return View(u);
