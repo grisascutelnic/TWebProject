@@ -77,7 +77,7 @@ ul li a {
     padding: 20px;
     margin-bottom: 20px; /* spațiu între containere */
     border-radius: 10px;
-    background-color: #dfefde;
+    background-color: black;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* umbra ușoară pentru efect de elevație */
     transition: box-shadow 0.3s ease-in-out;
     cursor: pointer;
