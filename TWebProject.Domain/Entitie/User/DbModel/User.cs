@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TWebProject.Domain.Enums;
 
 namespace TWebProject.Domain.Entitie.User.DbModel
 {
@@ -25,5 +26,6 @@ namespace TWebProject.Domain.Entitie.User.DbModel
         [Required]
         public string UserName { get; set; }
 
+        public UserRole Level { get; set; }
     }
 }

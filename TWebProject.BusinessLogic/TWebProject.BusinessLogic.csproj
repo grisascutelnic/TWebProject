@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BDContent\User\UserContent.cs" />
+    <Compile Include="BDContext\User\UserContext.cs" />
     <Compile Include="BussinesLogic.cs" />
     <Compile Include="Core\AdminAPI.cs" />
     <Compile Include="Core\UserAPI.cs" />

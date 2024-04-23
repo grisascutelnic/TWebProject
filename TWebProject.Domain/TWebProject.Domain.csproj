@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="Entitie\User\DbModel\User.cs" />
     <Compile Include="Entitie\User\ULoginData.cs" />
+    <Compile Include="Enums\UserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,7 +66,6 @@
     <Folder Include="Entitie\Auth\" />
     <Folder Include="Entitie\GeneralResponse\" />
     <Folder Include="Entitie\Product\" />
-    <Folder Include="Enums\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
