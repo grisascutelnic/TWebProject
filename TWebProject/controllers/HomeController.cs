@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
 using TWebProject.Web.Models;
+
 
 namespace TWebProject.Web.Controllers
 {
@@ -22,7 +22,7 @@ namespace TWebProject.Web.Controllers
                 new Animal { Name = "Animall #1", ImageUrl = "/img/pisi1.png" },
                 new Animal { Name = "Animall #2", ImageUrl = "/img/pisi2.png" },
                 new Animal { Name = "Animall #3", ImageUrl = "/img/griCat.png" },
-                new Animal { Name = "Animall #4", ImageUrl = "/img/retvierCaine.png" }
+                new Animal { Name = "Animall #4", ImageUrl = "/img/griCat.png" }
             };
 
             return View(u);
