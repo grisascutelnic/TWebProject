@@ -3,26 +3,30 @@
 }
 
 <!doctype html>
-<html lang="">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Adoptex</title>
+    <title>@ViewBag.Title - Adoptex</title>
     <link rel="stylesheet" href="~/Style/styleIndex.css">
 </head>
 
 <body style="background-color: white">
-
-    <div class="header">
-        @Html.Partial("header")
-    </div>
+    @if (ViewBag.IsLogin != true)
+    {
+        <div class="header">
+            @Html.Partial("header")
+        </div>
+    }
 
     @RenderBody()
 
-    <div class="grid-container">
-        @Html.Partial("_Grid")
-    </div>
-
+    @if (ViewBag.IsLogin != true)
+    {
+        <div class="grid-container">
+            @Html.Partial("_Grid")
+        </div>
+    }
 </body>
 </html>

@@ -11,6 +11,8 @@ namespace TWebProject.Controllers
         // GET: Login
         public ActionResult Index()
         {
+            // În controller
+            ViewBag.IsLogin = true;
             return View();
         }
     }
