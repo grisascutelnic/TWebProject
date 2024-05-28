@@ -152,7 +152,7 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    <form id="registerForm">
         <h3>Register Here</h3>
 
         <label for="username">Username</label>
@@ -161,7 +161,7 @@
         <label for="password">Password</label>
         <input type="password" placeholder="Password" id="password">
 
-        <button>Register</button>
+        <button type="submit" id="registerButton">Register</button>
         <div class="social">
             <div class="go"><i class="fab fa-google"></i>  Google</div>
             <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
@@ -173,5 +173,17 @@
     </div>
 
     @RenderBody()
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Previne trimiterea formularului
+
+            // Aici poți adăuga logica pentru înregistrare (de exemplu, trimitera datelor către server)
+
+            // Redirecționează utilizatorul către pagina principală
+            window.location.href = "/Home/Index";
+        });
+    </script>
 </body>
+
 </html>
