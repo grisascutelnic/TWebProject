@@ -152,7 +152,7 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
+    <form id="loginForm">
         <h3>Login Here</h3>
 
         <label for="username">Username</label>
@@ -161,11 +161,12 @@
         <label for="password">Password</label>
         <input type="password" placeholder="Password" id="password">
 
-        <button>Login</button>
+        <button type="submit">Login</button>
         <div class="social">
-            <div class="go"><i class="fab fa-google"></i>  Google</div>
-            <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+            <div class="go"><i class="fab fa-google"></i> Google</div>
+            <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
         </div>
+        <div id="error-message" style="color: red; display: none;">Login sau parola incorecta</div>
     </form>
 
     <div class="header">
@@ -173,5 +174,46 @@
     </div>
 
     @RenderBody()
+
+    <div id="welcome-message" style="display: none; background-color: green; color: white; text-align: center; 
+        padding: 10px; position: absolute; top: 10px; right: 620px; width: 300px; border-radius: 13px;">
+        Welcome Admin
+    </div>
+
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Previne trimiterea formularului
+
+            // Colectează datele din formular
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Simulează o cerere către server (aici folosim un exemplu static pentru ilustrare)
+            // Într-un scenariu real, ai folosi fetch sau AJAX pentru a trimite datele către server
+            if (username === "admin" && password === "1111") {
+                // Login reușit
+                localStorage.setItem('isAdmin', 'true'); // Stochează că utilizatorul este admin
+
+                // Afișează mesajul de bun venit
+                var welcomeMessage = document.getElementById('welcome-message');
+                welcomeMessage.style.display = 'block';
+
+                // Redirecționează utilizatorul după 2 secunde
+                setTimeout(function () {
+                    window.location.href = "/Home/Index";
+                }, 2000);
+            } else {
+                // Login eșuat
+                var errorMessage = document.getElementById('error-message');
+                errorMessage.style.display = 'block'; // Afișează mesajul de eroare
+                setTimeout(function () {
+                    errorMessage.style.display = 'none'; // Ascunde mesajul de eroare după 3 secunde
+                }, 3000);
+            }
+        });
+    </script>
 </body>
+
+
 </html>

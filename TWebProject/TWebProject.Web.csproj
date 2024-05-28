@@ -144,6 +144,8 @@
     <Content Include="Views\Shared\_LayoutRegister.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+    <Content Include="Views\Home\Adopt.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdopt.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
