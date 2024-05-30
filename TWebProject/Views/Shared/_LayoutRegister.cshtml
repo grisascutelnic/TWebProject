@@ -55,7 +55,7 @@
         }
 
         form {
-            height: 520px;
+            height: 550px;
             width: 400px;
             background-color: rgba(255,255,255,0.13);
             position: absolute;
@@ -166,6 +166,7 @@
             <div class="go"><i class="fab fa-google"></i>  Google</div>
             <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
         </div>
+        <div id="error" style="color: red;"></div>
     </form>
 
     <div class="header">
@@ -178,6 +179,21 @@
         document.getElementById('registerForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Previne trimiterea formularului
 
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var errorDiv = document.getElementById('error');
+            errorDiv.textContent = ''; // Resetează mesajul de eroare
+
+            if (!username || !password) {
+                errorDiv.textContent = 'Completati toate campurile';
+                return;
+            }
+
+            if (password.length < 8) {
+                errorDiv.textContent = 'Parola trebuie sa fie mai mare de 8 caractere';
+                return;
+            }
+
             // Aici poți adăuga logica pentru înregistrare (de exemplu, trimitera datelor către server)
 
             // Redirecționează utilizatorul către pagina principală
@@ -185,5 +201,6 @@
         });
     </script>
 </body>
+
 
 </html>
