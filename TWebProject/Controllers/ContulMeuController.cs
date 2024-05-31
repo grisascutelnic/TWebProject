@@ -11,6 +11,7 @@ namespace TWebProject.Controllers
         // GET: ContulMeu
         public ActionResult Index()
         {
+            ViewBag.ActivePage = "ContulMeu";
             return View();
         }
     }

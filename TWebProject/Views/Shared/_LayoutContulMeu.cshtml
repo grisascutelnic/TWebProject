@@ -1,4 +1,4 @@
-﻿@{
+﻿﻿@{
     ViewBag.Title = "_LayoutContulMeu";
 }
 
@@ -7,12 +7,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="~/Style/styleIndex.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Personal</title>
     <link rel="stylesheet" href="~/css/style.css">
 </head>
 <body>
+    <div class="header">
+        @Html.Partial("header")
+    </div>
+
     <div class="profile-container">
         <div class="profile-header">
             <img src="~/img/img.jpg" alt="Profile Picture" class="profile-picture">
@@ -34,4 +39,3 @@
     </div>
 </body>
 </html>
-

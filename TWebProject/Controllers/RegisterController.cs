@@ -11,6 +11,7 @@ namespace TWebProject.Controllers
         // GET: Register
         public ActionResult Index()
         {
+            ViewBag.ActivePage = "Register";
             ViewBag.IsLogin = true;
             return View();
         }

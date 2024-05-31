@@ -11,6 +11,7 @@ namespace TWebProject.Controllers
         // GET: Adopt
         public ActionResult Index()
         {
+            ViewBag.ActivePage = "Adopt";
             return View();
         }
     }
