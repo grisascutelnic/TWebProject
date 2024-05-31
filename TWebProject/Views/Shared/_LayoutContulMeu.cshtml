@@ -4,240 +4,34 @@
 
 @RenderBody()
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Personal</title>
     <link rel="stylesheet" href="~/css/style.css">
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar {
-            position: fixed;
-            width: 99.5%;
-            top: 0.5%;
-            z-index: 1000;
-            background-color: #333; /* Schimbă culoarea după cum este necesar */
-            border-bottom: 1px solid #ccc; /* Opțional, pentru o linie sub bară */
-        }
-
-        .content {
-            margin-top: 60px; /* Ajustează în funcție de înălțimea barei de navigare */
-        }
-
-        ul {
-            position: -webkit-sticky; /* Safari */
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-            width: 100%; /* Asigură că bara de navigare ocupă întreaga lățime */
-        }
-
-        li {
-            float: left;
-        }
-
-            li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-                transition: background-color 0.3s; /* Adaugă o tranziție pentru schimbarea culorii de fundal */
-            }
-
-                li a:hover {
-                    background-color: #111;
-                }
-
-                li a.active {
-                    background-color: #4CAF50;
-                }
-
-            li.float-right {
-                float: right;
-            }
-    </style>
-    
-    <script>
-        function navigateToHome() {
-            window.location.href = '@Url.Action("Index", "Home")';
-        }
-    </script>
 </head>
 <body>
-    <div class="navbar">
-        <ul>
-            <li><a class="active" href="@Url.Action("Index", "Home")">Home</a></li>
-            <li><a href="@Url.Action("Index", "Adopt")">Adopt</a></li>
-            <li><a href="donate.html">Donate</a></li>
-            <li><a href="adopt.html">Preferate</a></li>
-            <li class="float-right"><a href="@Url.Action("Index", "ContulMeu")">Contul meu</a></li>
-            <li class="float-right"><a href="@Url.Action("Index", "Login")">Login</a></li>
-            <li class="float-right"><a href="@Url.Action("Index", "Register")">Register</a></li>
-        </ul>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="~/img/img.jpg" alt="Profile Picture" class="profile-picture">
+            <h1 class="profile-name">Frimu Dumitru</h1>
+            <h2 class="profile-username">Dima</h2>
+        </div>
+        <div class="profile-actions">
+            <button class="action-button">Conversații <span class="count">2</span></button>
+            <button class="action-button">Editare</button>
+            <button class="action-button">Deconectare</button>
+        </div>
+        <div class="profile-info">
+            <p><i class="fa fa-map-marker"></i> Nisporeni, Republica Moldova</p>
+            <p><i class="fa fa-nume-"></i> Nume: Frimu</p>
+            <p><i class="fa fa-prenume"></i> Prenume: Dumitru</p>
+            <p><i class="fa fa-email"></i>Email: dumitrufrimu100@gmail.com</p>
+            <p><i class="fa fa-phone"></i> Telefon: +123456789</p>
+        </div>
     </div>
-
-    <div class="content">
-        <section class="ftco-section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-6 text-center mb-5">
-                        <h2 class="heading-section">Contul meu</h2>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-12">
-                        <div class="wrapper">
-                            <div class="row mb-5">
-                                <div class="col-md-3">
-                                    <div class="dbox w-100 text-center">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-map-marker"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p><span>Adresa:</span> Chisinau, str. Studentilor1/1</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="dbox w-100 text-center">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-phone"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p><span>Telefon:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="dbox w-100 text-center">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-paper-plane"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="dbox w-100 text-center">
-                                        <div class="icon d-flex align-items-center justify-content-center">
-                                            <span class="fa fa-globe"></span>
-                                        </div>
-                                        <div class="text">
-                                            <p><span>Facebook</span> <a href="#">facebookLink</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row no-gutters">
-                                <div class="col-md-7">
-                                    <div class="contact-wrap w-100 p-md-5 p-4">
-                                        <h3 class="mb-4">Contact Us</h3>
-                                        <div id="form-message-warning" class="mb-4"></div>
-                                        <div id="form-message-success" class="mb-4">
-                                            Your message was sent, thank you!
-                                        </div>
-                                        <form method="POST" id="contactForm" name="contactForm" class="contactForm">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label class="label" for="name">Full Name</label>
-                                                        <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label class="label" for="email">Email Address</label>
-                                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="label" for="subject">Subject</label>
-                                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label class="label" for="#">Message</label>
-                                                        <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <input type="submit" value="Send Message" class="btn btn-primary">
-                                                        <div class="submitting"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="col-md-5 d-flex align-items-stretch">
-                                    <div class="info-wrap w-100 p-5 img" style="background-image: url(/img/img.jpg);">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/main.js"></script>
-
-    <script>
-        (function () {
-            var ws = new WebSocket('ws://' + window.location.host +
-                '/jb-server-page?reloadMode=RELOAD_ON_SAVE&' +
-                'referrer=' + encodeURIComponent(window.location.pathname));
-            ws.onmessage = function (msg) {
-                if (msg.data === 'reload') {
-                    window.location.reload();
-                }
-                if (msg.data.startsWith('update-css ')) {
-                    var messageId = msg.data.substring(11);
-                    var links = document.getElementsByTagName('link');
-                    for (var i = 0; i < links.length; i++) {
-                        var link = links[i];
-                        if (link.rel !== 'stylesheet') continue;
-                        var clonedLink = link.cloneNode(true);
-                        var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
-                        if (newHref !== link.href) {
-                            clonedLink.href = newHref;
-                        } else {
-                            var indexOfQuest = newHref.indexOf('?');
-                            if (indexOfQuest >= 0) {
-                                // to support ?foo#hash
-                                clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' +
-                                    newHref.substring(indexOfQuest + 1);
-                            } else {
-                                clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
-                            }
-                        }
-                        link.replaceWith(clonedLink);
-                    }
-                }
-            };
-        })();
-    </script>
 </body>
 </html>
+
