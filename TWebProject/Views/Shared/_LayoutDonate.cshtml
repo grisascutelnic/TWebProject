@@ -1,0 +1,147 @@
+﻿
+@{
+    ViewBag.Title = "_LayoutAdopt";
+}
+
+@RenderBody()
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <link rel="stylesheet" href="~/Style/styleIndex.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chestionar Donare Animal de Companie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input, select, textarea, button {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #218838;
+            }
+
+        #statusMessage {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        @Html.Partial("header")
+    </div>
+    <div class="container">
+        <h1>Chestionar Donare Animal de Companie</h1>
+        <form id="donationForm">
+            <label for="nume">Nume:</label>
+            <input type="text" id="nume" name="nume" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefon">Telefon:</label>
+            <input type="tel" id="telefon" name="telefon" required>
+
+            <label for="tipAnimal">Tipul animalului:</label>
+            <select id="tipAnimal" name="tipAnimal" required>
+                <option value="">Selectează...</option>
+                <option value="Caine">Câine</option>
+                <option value="Pisica">Pisică</option>
+                <option value="Pasare">Pasăre</option>
+                <option value="Reptila">Reptilă</option>
+                <option value="Altul">Altul</option>
+            </select>
+
+            <label for="varsta">Vârsta animalului:</label>
+            <input type="number" id="varsta" name="varsta" required>
+
+            <label for="motivDonare">De ce dorești să donezi animalul?</label>
+            <textarea id="motivDonare" name="motivDonare" rows="4" required></textarea>
+
+            <label for="sanatate">Starea de sănătate a animalului:</label>
+            <textarea id="sanatate" name="sanatate" rows="4"></textarea>
+
+            <button type="submit">Trimite</button>
+        </form>
+        <p id="statusMessage"></p>
+    </div>
+    <script>
+        document.getElementById('donationForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nume = document.getElementById('nume').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefon = document.getElementById('telefon').value.trim();
+            const tipAnimal = document.getElementById('tipAnimal').value;
+            const varsta = document.getElementById('varsta').value.trim();
+            const motivDonare = document.getElementById('motivDonare').value.trim();
+            const sanatate = document.getElementById('sanatate').value.trim();
+
+            if (nume === "" || email === "" || telefon === "" || tipAnimal === "" || varsta === "" || motivDonare === "") {
+                document.getElementById('statusMessage').textContent = "Toate câmpurile sunt obligatorii.";
+                return;
+            }
+
+            const statusMessage = `
+                        Chestionarul a fost trimis cu succes!<br><br>
+                        <strong>Datele introduse:</strong><br>
+                        Nume: ${nume}<br>
+                        Email: ${email}<br>
+                        Telefon: ${telefon}<br>
+                        Tipul animalului: ${tipAnimal}<br>
+                        Vârsta: ${varsta}<br>
+                        Motiv donare: ${motivDonare}<br>
+                        Starea de sănătate: ${sanatate}
+                    `;
+
+            document.getElementById('donationForm').style.display = 'none';
+            document.getElementById('statusMessage').innerHTML = statusMessage;
+            document.getElementById('statusMessage').style.color = '#28a745';
+        });
+    </script>
+</body>
+</html>
+

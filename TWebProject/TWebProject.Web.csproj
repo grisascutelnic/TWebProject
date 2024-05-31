@@ -136,6 +136,7 @@
     <Compile Include="Controllers\AdoptController.cs" />
     <Compile Include="Controllers\ButtonAscunsController.cs" />
     <Compile Include="Controllers\ContulMeuController.cs" />
+    <Compile Include="Controllers\DonateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
@@ -170,6 +171,8 @@
     <Content Include="Views\Shared\_LayoutContulMeu.cshtml" />
     <Content Include="Views\ButtonAscuns\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutButton.cshtml" />
+    <Content Include="Views\Donate\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutDonate.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">
