@@ -13,6 +13,7 @@ namespace TWebProject.Web.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            ViewBag.ActivePage = "Home";
 
             UserData u = new UserData();
 
