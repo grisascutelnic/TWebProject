@@ -1,0 +1,65 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDelete.cshtml";
+    ViewBag.Title = "Delete";
+}
+
+<style>
+    /* Stilizare pentru containerul formularului */
+    .container {
+        width: 40%;
+        margin-top: 10%;
+        text-align: center;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Stilizare pentru butoane */
+    .btn {
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Stilizare pentru butonul de anulare */
+    .btn-secondary {
+        background-color: #6c757d;
+    }
+
+    /* Stilizare pentru butonul de ștergere */
+    .btn-danger {
+        background-color: #dc3545;
+    }
+
+    /* Stilizare pentru textul de avertizare */
+    .text-danger {
+        color: #dc3545;
+    }
+
+    /* Stilizare pentru titlul formularului */
+    h2 {
+        color: #007bff;
+    }
+
+    /* Stilizare pentru subtitlul formularului */
+    h3 {
+        color: #dc3545;
+    }
+</style>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="text-center">Delete Animal</h2>
+            <h3 class="text-center text-danger">Are you sure you want to delete @ViewBag.Name?</h3>
+            <div class="text-center">
+                <a href="/Management/Index" class="btn btn-secondary">Cancel</a>
+                <a href="/Management/ConfirmDelete?name=@ViewBag.Name" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>

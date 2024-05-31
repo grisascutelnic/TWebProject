@@ -1,0 +1,115 @@
+﻿
+    <style>
+        body {
+            
+        }
+
+        .container {
+            margin-top: 22%;
+            width: 40%;
+           
+            text-align: center;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .table-bordered {
+            border: 1px solid #dee2e6;
+        }
+
+            .table-bordered th,
+            .table-bordered td {
+                border: 1px solid #dee2e6;
+            }
+
+        .btn-primary, .btn-danger {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
+        .btn-primary {
+            background-color: royalblue;
+            border-color: royalblue;
+        }
+
+        .btn-danger {
+            background-color: red;
+            border-color: red;
+        }
+
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary-big {
+            margin-bottom: 20px;
+            display: block;
+            width: 150px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .table table-striped table-bordered {
+            width: 100%;
+        }
+    </style>
+
+    <div class="container">
+        <h2>Manage Animals</h2>
+        <button class="btn btn-primary btn-primary-big" href="/Create/Index">Add Animal</button>
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    var animals = new[]
+                    {
+                        new { Name = "Mistyy", Description = "Salut! Mă numesc Mistyy și sunt o mică exploratoare în căutare de aventuri în noua mea casă. Sunt plină de energie și curiozitate, și mi-ar plăcea să am un prieten ca tine cu care să mă joc și să împart momente speciale.", ImageUrl = "~/img/pisi2.png" },
+                        new { Name = "Mamamia", Description = "Salut! Mă numesc Mistyy și sunt o mică exploratoare în căutare de aventuri în noua mea casă. Sunt plină de energie și curiozitate, și mi-ar plăcea să am un prieten ca tine cu care să mă joc și să împart momente speciale.", ImageUrl = "~/img/pisi1.png" },
+                        new { Name = "Domino", Description = "Hei! Sunt Domino și sunt expert în a câștiga inimi. Cu ochii mei mari și inocenți și cu blana mea moale, sunt gata să te fac să te îndrăgostești de mine. Vrei să fiu micul tău partener de viață?", ImageUrl = "~/img/dominoCaine.png" },
+                        new { Name = "Whiskers", Description = "Salut, mă numesc Whiskers și sunt un explorator născut, curios să descopăr fiecare colț al noii mele case. Sunt gata să aduc bucurie și jocuri nelimitate în viața ta!", ImageUrl = "~/img/retvierCaine.png" },
+                        new { Name = "Oreo", Description = "Hei! Eu sunt Oreo, mica ta brioșă pătată, care adoră să fie centrul atenției. Sunt o minge de energie și afecțiune, gata să te fac să râzi și să te iubească zi de zi.", ImageUrl = "~/img/oreoCat.png" },
+                        new { Name = "Gri", Description = "Bună, mă numesc Gri și sunt un mic aventurier cu o blană catifelată care abia așteaptă să fie mângâiată. Dacă ești în căutarea unui prieten loial care să-ți umple zilele cu joc și companie, atunci eu sunt alegerea perfectă.", ImageUrl = "~/img/griCat.png" }
+                    };
+
+                    foreach (var item in animals)
+                    {
+                                <tr>
+                                    <td>@item.Name</td>
+                                    <td>@item.Description</td>
+                                    <td><img src="@Url.Content(item.ImageUrl)" alt="@item.Name" width="100" height="100" /></td>
+                                    <td>
+                                        <button class="btn btn-primary" onclick="navigateToAnimal('@item.Name')">Edit</button>
+                                        <button class="btn btn-danger" onclick="deleteAnimal('@item.Name')">Delete</button>
+                                    </td>
+
+                                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function navigateToAnimal(animalName) {
+            window.location.href = '/Management/Edit?name=' + encodeURIComponent(animalName);
+        }
+
+        function deleteAnimal(animalName) {
+            window.location.href = '/Management/Delete?name=' + encodeURIComponent(animalName);
+        }
+    </script>
+
