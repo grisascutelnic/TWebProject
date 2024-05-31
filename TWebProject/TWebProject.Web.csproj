@@ -128,6 +128,7 @@
     <Content Include="img\upImg.png" />
     <Content Include="img\yellowStar.png" />
     <Content Include="Style\login.css" />
+    <Content Include="Style\styleAnimal.css" />
     <Content Include="Style\styleIndex.css" />
     <Content Include="Web.config" />
   </ItemGroup>
