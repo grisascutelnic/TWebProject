@@ -23,19 +23,27 @@
 
     <div class="animal-profile">
         <div class="animal-image">
-            <img src="~/img/pisi1.png" alt="Animal Image">
+            <img src="~/img/pisi2.png" alt="Animal Image">
         </div>
         <div class="animal-info">
             <h1>Animal Name</h1>
-            <p><strong>Species:</strong> Dog</p>
-            <p><strong>Breed:</strong> Labrador Retriever</p>
-            <p><strong>Age:</strong> 3 years</p>
-            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Species:</strong> Cat</p>
+            <p><strong>Breed:</strong> RagDoll</p>
+            <p><strong>Age:</strong> 1 year</p>
+            <p><strong>Gender:</strong> Femme</p>
             <p><strong>Location:</strong> New York, NY</p>
-            <p><strong>Description:</strong> This is a friendly and energetic Labrador Retriever looking for a loving home. He loves to play and is great with children.</p>
-            <button class="adopt-button">Adopt Me</button>
+            <p>
+                Salut! Ma numesc Mistyy si sunt o mica exploratoare in cautare de aventuri in noua mea casa.
+                Sunt plina de energie si curiozitate, si mi-ar placea sa am un prieten ca tine
+                cu care sa ma joc si sa impart momente speciale.
+            </p>
+            <button id="adopt-button" class="adopt-button">Adopt Me</button>
         </div>
     </div>
+
+    <script>document.getElementById("adopt-button").addEventListener("click", function() {
+    window.location.href = "/Adopt/Index"; // Înlocuiește cu URL-ul paginii de adopție dorit
+        });</script>
 
 </body>
 </html>
