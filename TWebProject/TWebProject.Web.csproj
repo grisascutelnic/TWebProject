@@ -140,6 +140,7 @@
     <Compile Include="Controllers\DonateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PreferateController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -174,6 +175,8 @@
     <Content Include="Views\Shared\_LayoutButton.cshtml" />
     <Content Include="Views\Donate\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutDonate.cshtml" />
+    <Content Include="Views\Preferate\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutPreferate.cshtml" />
     <None Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Web.Debug.config">

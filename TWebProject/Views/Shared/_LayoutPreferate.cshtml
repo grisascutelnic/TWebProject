@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "_LayoutPreferate";
+}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title - Adoptex</title>
+    <link rel="stylesheet" href="~/Style/styleIndex.css">
+</head>
+
+<body style="background-color: azure ">
+    @if (ViewBag.IsLogin != true)
+    {
+        <div class="header">
+            @Html.Partial("header")
+        </div>
+    }
+
+    @RenderBody()
+
+    @if (ViewBag.IsLogin != true)
+    {
+        <div class="grid-container">
+
+            <div onclick="window.location='@Url.Action("Animal", "Home")';" style="cursor:pointer;">
+
+
+                <div class="grid-item" data-animal-name="Mistyy" onclick="navigateToAnimal(this.getAttribute('data-animal-name'));">
+                    <img src="~/img/pisi2.png" alt="Animal">
+                    <div class="description">
+                        <p>
+                            Salut! Mă numesc Mistyy și sunt o mică exploratoare în căutare de aventuri în noua mea casă.
+                            Sunt plină de energie și curiozitate, și mi-ar plăcea să am un prieten ca tine
+                            cu care să mă joc și să împart momente speciale.
+                        </p>
+                    </div>
+                    <img src="~/img/yellowStar.png" alt="yellow Star" style="height: 35px; width: 35px; margin-top:30px;">
+                </div>
+            </div>
+
+            <div class="grid-item" data-animal-name="Mistyy" onclick="navigateToAnimal(this.getAttribute('data-animal-name'));">
+                <img src="~/img/pisi1.png" alt="Animal">
+                <div class="description">
+                    <p>
+                        Salut! Mă numesc Mistyy și sunt o mică exploratoare în căutare de aventuri în noua mea casă.
+                        Sunt plină de energie și curiozitate, și mi-ar plăcea să am un prieten ca tine
+                        cu care să mă joc și să împart momente speciale.
+                    </p>
+                </div>
+                <img src="~/img/yellowStar.png" alt="yellow Star" style="height: 35px; width: 35px; margin-top:30px;">
+            </div>
+
+
+            <div class="grid-item" data-animal-name="Mistyy" onclick="navigateToAnimal(this.getAttribute('data-animal-name'));">
+                <img src="~/img/dominoCaine.png" alt="Animal">
+                <div class="description">
+                    <p>
+                        Hei! Sunt Domino și sunt expert în a câștiga inimi.
+                        Cu ochii mei mari și inocenți și cu blana mea moale, sunt gata să te fac să te îndrăgostești de mine.
+                        Vrei să fiu micul tău partener de viață?
+                    </p>
+                </div>
+                <img src="~/img/yellowStar.png" alt="yellow Star" style="height: 35px; width: 35px; margin-top:30px;">
+            </div>
+
+            <div class="grid-item" data-animal-name="Mistyy" onclick="navigateToAnimal(this.getAttribute('data-animal-name'));">
+                <img src="~/img/griCat.png" alt="Animal">
+                <div class="description">
+                    <p>
+                        Bună, mă numesc Gri și sunt un mic aventurier cu o blană catifelată care abia așteaptă să fie mângâiată.
+                        Dacă ești în căutarea unui prieten loial care să-ți umple zilele cu joc și companie, atunci eu sunt alegerea perfectă.
+                        /p>
+                </div>
+                <img src="~/img/yellowStar.png" alt="yellow Star" style="height: 35px; width: 35px; margin-top:30px;">
+            </div>
+        </div>
+    }
+</body>
+</html>
+
+
