@@ -202,8 +202,17 @@
                 // Redirecționează utilizatorul după 2 secunde
                 setTimeout(function () {
                     window.location.href = "/Home/Index";
+                    window.location.href = "/ButtonAscuns/Index";
                 }, 2000);
-            } else {
+            }
+            if (username === "dima" && password === "1111") {
+                // Login reușit
+                localStorage.setItem('isUser', 'true'); // Stochează că utilizatorul este user simplu
+
+                window.location.href = "/Home/Index";
+                window.location.href = "/ButtonAscuns/Index";
+            }
+             else {
                 // Login eșuat
                 var errorMessage = document.getElementById('error-message');
                 errorMessage.style.display = 'block'; // Afișează mesajul de eroare

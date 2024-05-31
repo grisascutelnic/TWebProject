@@ -106,3 +106,60 @@ ul li a {
   text-align: center; /* centrat stelele de rating */
   margin-top: 10px; /* spațiu deasupra rating-ului */
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.animal-profile {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animal-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.animal-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+    .animal-info h1 {
+        font-size: 2em;
+        margin: 0;
+    }
+
+    .animal-info p {
+        margin: 10px 0;
+        font-size: 1em;
+        color: #333;
+    }
+
+.adopt-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+    .adopt-button:hover {
+        background-color: #0056b3;
+    }

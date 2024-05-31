@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "_LayoutButton";
+}
+
+@RenderBody()
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title - Adoptex</title>
+    <link rel="stylesheet" href="~/Style/styleIndex.css">
+</head>
+<body>
+
+    <h2>Welcome, Dumitru</h2>
+
+    <ul>
+        <li><a class="active" href="/Home/Index">Home</a></li>
+        <li><a href="/Adopt/Index">Adopt</a></li>
+        <li><a href="donate.html">Donate</a></li>
+        <li><a href="adopt.html">Preferate</a></li>
+        <span></span>
+        <li style="float:right"><a href="#deconectare">Deconectare</a></li>
+        <li style="float:right"><a href="/ContulMeu/Index">Contul meu</a></li>
+    </ul>
+
+    <div class="grid-container">
+    @Html.Partial("_Grid")
+</div>
+
+    <script 
+            src="script.js">
+    </script>
+</body>
+</html>
